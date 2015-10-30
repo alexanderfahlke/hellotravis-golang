@@ -23,5 +23,9 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello Travic-CI")
+	fmt.Println(shout("Hello Travis-CI"))
+}
+
+func shout(msg string) string {
+	return msg + "!"
 }

@@ -22,6 +22,19 @@ import (
 	"testing"
 )
 
-func TestMain(t *testing.T) {
-	t.SkipNow()
+func TestShout(t *testing.T) {
+	var msgtests = []struct {
+		msgIn  string
+		msgOut string
+	}{
+		{"hello", "hello!"},
+		{"Hello Travis-CI", "Hello Travis-CI!"},
+	}
+
+	for _, tt := range msgtests {
+		s := shout(tt.msgIn)
+		if s != tt.msgOut {
+			t.Errorf("shout(%q) => %q, want %q", tt.msgIn, s, tt.msgOut)
+		}
+	}
 }
