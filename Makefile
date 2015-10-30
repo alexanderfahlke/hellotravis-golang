@@ -37,3 +37,7 @@ clean:
 
 coverage: testdeps
 	goveralls -v github.com/alexanderfahlke/hellotravis/...
+
+testlocal: testdeps
+	go test -v -cpu 1,4 -coverprofile coverage.out
+	go tool cover -html=coverage.out -o coverage.html
