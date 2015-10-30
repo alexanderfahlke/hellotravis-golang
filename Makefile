@@ -1,6 +1,9 @@
 .PHONY: \
 	all \
+	deps \
+	updatedeps \
 	testdeps \
+	updatetestdeps \
 	build \
 	test \
 	testrace \
@@ -8,8 +11,17 @@
 
 all: test testrace
 
+deps:
+	go get -d -v github.com/alexanderfahlke/hellotravis/...
+
+updatedeps:
+	go get -d -v -u -f github.com/alexanderfahlke/hellotravis/...
+
 testdeps:
 	go get -d -v -t github.com/alexanderfahlke/hellotravis/...
+
+updatetestdeps:
+	go get -d -v -t -u -f github.com/alexanderfahlke/hellotravis/...
 
 build: deps
 	go build github.com/alexanderfahlke/hellotravis/...
