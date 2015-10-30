@@ -1,0 +1,17 @@
+language: go
+
+go:
+  - tip
+
+before_install:
+  - go get github.com/mattn/goveralls
+  - go get github.com/axw/gocov/gocov
+  - if ! go get github.com/golang/tools/cmd/cover; then go get golang.org/x/tools/cmd/cover; fi
+
+install:
+  - mkdir -p "$GOPATH/src/github.com/alexanderfahlke"
+  - mv "$TRAVIS_BUILD_DIR" "$GOPATH/src/github.com/alexanderfahlke/hellotravis"
+
+script:
+  - make test testrace
+  - make coverage

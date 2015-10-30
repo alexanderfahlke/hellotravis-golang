@@ -1,2 +1,2 @@
 # hellotravis
-repo for testing stuff with travis-ci
+A repository for testing golang stuff with travis-ci.
