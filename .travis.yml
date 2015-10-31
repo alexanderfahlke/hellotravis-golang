@@ -7,7 +7,8 @@ before_install:
 
 install:
   - mkdir -p "$GOPATH/src/github.com/alexanderfahlke"
-  - mv "$TRAVIS_BUILD_DIR" "$GOPATH/src/github.com/alexanderfahlke/hellotravis"
+  - mv "$TRAVIS_BUILD_DIR" "$GOPATH/src/github.com/alexanderfahlke/hellotravis-golang"
+  - ls "$GOPATH/src/github.com/alexanderfahlke/hellotravis-golang"
 
 script:
   - make test testrace
