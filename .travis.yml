@@ -1,15 +1,13 @@
 language: go
 
+go:
+  - 1.4
+  - 1.5
+
 before_install:
   - go get github.com/mattn/goveralls
   - go get github.com/axw/gocov/gocov
   - go get golang.org/x/tools/cmd/cover
-
-install:
-  - mkdir -p "$GOPATH/src/github.com"
-  - mv "$TRAVIS_BUILD_DIR" "$GOPATH/src/github.com/alexanderfahlke"
-  - ls "$GOPATH/src/github.com/alexanderfahlke"
-  - ls "$GOPATH/src/github.com/alexanderfahlke/hellotravis-golang"
 
 script:
   - make test testrace
