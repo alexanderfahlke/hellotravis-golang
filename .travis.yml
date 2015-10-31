@@ -7,9 +7,7 @@ go:
 
 env:
   global:
-    matrix:
-      - BUILD_GOARCH=amd64
-      - BUILD_GOARCH=386
+    - BUILD_GOARCH=amd64
   matrix:
     - BUILD_GOOS=linux
     - BUILD_GOOS=darwin
