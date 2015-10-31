@@ -16,13 +16,7 @@
  *
  */
 
-package main
-
-import (
-	"fmt"
-	"github.com/alexanderfahlke/hellotravis-golang/shout"
-)
-
-func main() {
-	fmt.Println(shout.Shout("Hello Travis-CI"))
-}
+/*
+	Sample subfolder with a function and some godoc.
+*/
+package shout

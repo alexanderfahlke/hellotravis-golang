@@ -16,13 +16,7 @@
  *
  */
 
+/*
+	A sample project for building a golang project with travis-ci and coveralls.io.
+*/
 package main
-
-import (
-	"fmt"
-	"github.com/alexanderfahlke/hellotravis-golang/shout"
-)
-
-func main() {
-	fmt.Println(shout.Shout("Hello Travis-CI"))
-}
