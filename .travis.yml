@@ -3,6 +3,21 @@ language: go
 go:
   - 1.4
   - 1.5
+  - tip
+
+env:
+  # "gvm update" resets GOOS and GOARCH environment variable, workaround it by setting
+  # BUILD_GOOS and BUILD_GOARCH and overriding GOARCH and GOOS in the build script
+  global:
+    - BUILD_GOARCH=amd64
+  matrix:
+    - BUILD_GOOS=linux
+    - BUILD_GOOS=darwin
+    - BUILD_GOOS=windows
+
+matrix:
+  allow_failures:
+    - go: tip
 
 before_install:
   - go get github.com/mattn/goveralls
@@ -12,3 +27,4 @@ before_install:
 script:
   - make test testrace
   - make coverage
+
