@@ -7,11 +7,11 @@ go:
 
 env:
   global:
-    - BUILD_GOARCH=amd64
+    - GOARCH=amd64
   matrix:
-    - BUILD_GOOS=linux
-    - BUILD_GOOS=darwin
-    - BUILD_GOOS=windows
+    - GOOS=linux
+    - GOOS=darwin
+    - GOOS=windows
 
 matrix:
   allow_failures:
