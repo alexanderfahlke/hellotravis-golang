@@ -19,7 +19,6 @@
 package shout
 
 import (
-	"github.com/alexanderfahlke/hellotravis-golang/shout"
 	"testing"
 )
 
@@ -33,7 +32,7 @@ func TestShout(t *testing.T) {
 	}
 
 	for _, tt := range msgtests {
-		s := shout.Shout(tt.msgIn)
+		s := Shout(tt.msgIn)
 		if s != tt.msgOut {
 			t.Errorf("shout(%q) => %q, want %q", tt.msgIn, s, tt.msgOut)
 		}
