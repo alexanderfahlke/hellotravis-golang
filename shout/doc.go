@@ -16,5 +16,7 @@
  *
  */
 
-package main
-
+/*
+	Sample subfolder with a function and some godoc.
+*/
+package shout

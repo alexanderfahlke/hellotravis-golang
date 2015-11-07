@@ -16,5 +16,7 @@
  *
  */
 
+/*
+	A sample project for building a golang project with travis-ci and coveralls.io.
+*/
 package main
-

@@ -36,9 +36,4 @@ clean:
 	go clean github.com/alexanderfahlke/hellotravis-golang/...
 
 coverage: testdeps
-	goveralls -v github.com/alexanderfahlke/hellotravis-golang/...
-
-testlocal: testdeps
-	go test -v -race -cpu 1,4
-	go test -v -cpu 1,4 -coverprofile coverage.out
-	go tool cover -html=coverage.out -o coverage.html
+	./coverage.sh --coveralls

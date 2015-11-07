@@ -20,12 +20,9 @@ package main
 
 import (
 	"fmt"
+	"github.com/alexanderfahlke/hellotravis-golang/shout"
 )
 
 func main() {
-	fmt.Println(shout("Hello Travis-CI"))
-}
-
-func shout(msg string) string {
-	return msg + "!"
+	fmt.Println(shout.Shout("Hello Travis-CI"))
 }
