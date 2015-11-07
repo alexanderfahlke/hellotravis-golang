@@ -23,6 +23,4 @@ _testmain.go
 *.test
 *.prof
 
-# local test coverage files
-coverage.out
-coverage.html
+.cover
