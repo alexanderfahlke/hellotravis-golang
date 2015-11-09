@@ -21,3 +21,10 @@ before_script:
 script:
   - make test testrace
   - make coverage
+
+notifications:
+  email:
+    recipients:
+    - alexander.fahlke+travis-ci@gmail.com
+    on_success: always
+    on_failure: change
