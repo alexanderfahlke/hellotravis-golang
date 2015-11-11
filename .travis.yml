@@ -30,4 +30,6 @@ before_script:
 
 script:
   - make test testrace
+
+after_success:
   - make coverage
